@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-async function sendEmail (req, res) {
+async function sendEmailEth (req, res) {
     let testAccount = await nodemailer.createTestAccount();
 
     const transporter = nodemailer.createTransport({
@@ -23,4 +23,4 @@ async function sendEmail (req, res) {
     res.send('send email functionality')
 }
 
-module.exports = sendEmail
+module.exports = {sendEmailEth}
